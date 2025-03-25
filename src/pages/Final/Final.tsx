@@ -1,9 +1,10 @@
 import profilepic from "../../assets/Ellipse 114.png"
 import piclogo from "../../assets/Group 1585.svg"
 import "./Final.css"
-interface Props { }
-
-const Final = (props: Props) => {
+import { mydata } from "../Auth/Signup/Signup"
+import { review } from "../Auth/Login/Login"
+const Final = () => {
+  const finaldata:review=mydata
   return (
     <div className="final">
       <nav className="navbar">
@@ -16,8 +17,8 @@ const Final = (props: Props) => {
             <img src={piclogo} alt="add icon" className="profile-icon"/>
           </div>
           <div className="desc">
-            <p className="name-desc">Marry Doe</p>
-            <p className="gmail-desc">Marry@gmail.Company</p>
+            <p className="name-desc">{finaldata?.name || "Marry Doe"}</p>
+            <p className="gmail-desc">{finaldata?.email||"Marry@gmail.Company"}</p>
           </div>
         </div>
         <div>

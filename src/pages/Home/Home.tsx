@@ -1,9 +1,8 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
-interface Props { }
 
-const Home = (props: Props) => {
+
+const Home = () => {
     return (
         <div className='home'>
             <div className='headline'>
